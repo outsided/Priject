@@ -1,0 +1,17 @@
+.Sid{
+    display: grid;
+    grid-template-areas: 
+    'up'
+    'down';
+}
+.korzina{
+   
+    border-bottom: 1px solid;
+}
+.text{
+    text-align: center;
+}
+
+h2{
+    color:rgb(214, 210, 218)
+}

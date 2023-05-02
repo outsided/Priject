@@ -1,0 +1,19 @@
+.App {
+  display: grid;
+  grid-template-areas: 
+  'h h'
+  'c s';
+  grid-template-columns: 3fr 1fr;
+}
+.Header{
+  border-bottom: 1px solid;
+  grid-area: h;
+}
+.Sidebar{
+  border-left: 1px solid;
+  grid-area: s;
+}
+.Content{
+  grid-area: c;
+
+}
