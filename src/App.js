@@ -1,7 +1,7 @@
-import './App.css';
-import Header from './Header/Header'
-import Content from './Content/Content.jsx'
-import Sidebar from './Sidebar/Sidebar';
+import "./App.css";
+import Header from "./conponents/Header/Header";
+import Content from "./conponents/Content/Content.jsx";
+import Sidebar from "./conponents/Sidebar/Sidebar";
 
 function App() {
   return (

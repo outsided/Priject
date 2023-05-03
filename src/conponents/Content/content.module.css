@@ -1,0 +1,20 @@
+
+.cardList {
+    display: flex;
+    gap: 70px;
+}
+
+.card {
+    max-height: 230px;
+    padding: 11px;
+}
+.img {
+    border-radius: 10px;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.img:hover{
+        width: 200px;
+        height: 200px;
+}
