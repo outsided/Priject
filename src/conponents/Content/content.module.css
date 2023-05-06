@@ -1,20 +1,18 @@
-
 .cardList {
     display: flex;
     gap: 70px;
 }
-
+.button{
+    height: 20px;
+}
 .card {
-    max-height: 230px;
+    border: 1px solid rgb(208, 201, 201);
+    max-height: 270px;
     padding: 11px;
 }
 .img {
     border-radius: 10px;
     background-size: cover;
-    width: 200px;
-    height: 200px;
-}
-.img:hover{
-        width: 200px;
-        height: 200px;
+    max-width: 220px;
+    max-height: 200px;
 }
