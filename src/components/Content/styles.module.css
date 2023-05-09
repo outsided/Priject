@@ -1,28 +1,18 @@
 .cardList {
     display: flex;
-    margin-left: 170px;
-    margin-top: 60px;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
+    gap: 70px;
 }
-.name{
-    margin: 12px;
-    font-weight: bold;
+.button{
+    height: 20px;
 }
-.price {
-    align-items: end;
-}
-
 .card {
-    max-width: 250px;
-    border: 1px solid #E7E7E7;
+    border: 1px solid rgb(208, 201, 201);
+    max-height: 270px;
     padding: 11px;
 }
 .img {
     border-radius: 10px;
     background-size: cover;
-    object-fit: contain;
-    width: 228px;
-    height: 130px;
+    max-width: 220px;
+    max-height: 200px;
 }
