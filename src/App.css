@@ -6,11 +6,12 @@
   grid-template-columns: 3fr 1fr;
 }
 .Header{
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #E7E7E7;
   grid-area: h;
 }
 .Sidebar{
-  border-left: 1px solid;
+  border-left: 1px solid #E7E7E7;
+
   grid-area: s;
 }
 .Content{

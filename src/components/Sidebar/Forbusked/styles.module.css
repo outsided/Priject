@@ -1,0 +1,21 @@
+.under {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.img{
+    margin-left: 40px;
+    margin-bottom: 40px;
+    width: 90px;
+    background-size: cover;
+}
+.name{
+    font-weight: bold;
+}
+.buttons{
+    width:19.98px;
+}
+.button{
+  border: none;
+    background-color: #ffffff;
+}
