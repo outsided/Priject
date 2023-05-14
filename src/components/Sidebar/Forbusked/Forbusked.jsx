@@ -1,32 +1,70 @@
-import { useState } from 'react';
-import { PRODUCTSBASKET } from '../../Content/constant';
-import styles from './styles.module.css'
+import { useState } from "react";
+import { PRODUCTSBASKET } from "../../Content/constant";
+import styles from "./styles.module.css";
 
 const Forbasked = () => {
-    const [counter, setCounter] = useState(0)
-    function plus(){
-        setCounter(counter +1)
-    }
-    function minus(){
-        setCounter(counter -1)
-    }
-    return (
-        <>
-        {
-        PRODUCTSBASKET.map(products => ( 
-             <div className={styles.under}>
-                
-                <img className={styles.img} src={products.img}></img>
-                <p className={styles.name}>{products.name}</p>
-                
-               <button className={styles.button} type="button" onClick={plus}><img className={styles.buttons} src='images/minus.jpg'></img></button>
-               <p>{counter}</p>
-               <button className={styles.button} type="button" onClick={minus}><img className={styles.buttons} src='images/plus.jpg'></img></button>
-                  <text  className={styles.text}>{products.price}</text>
+
+  const [products, setProducts] = useState(PRODUCTSBASKET);
+
+  function plus(e) {
+     const id = Number(e.currentTarget.dataset.productId);
+     setProducts(prev => {
+        return prev.map(product => {
+            if(product.id === id) {
+                return {
+                    ...product,
+                    quantity: product.quantity + 1
+                }
+            }
+            return product
+        })
+     })
+  }
+
+  function minus(e) {
+    
+  }
+
+  return (
+    <>
+      {products.length === 0 ? (
+        <div>Basket is empty</div>
+      ) : (
+        products.map((product) => (
+          <div key={`product-id-${product.id}`} className={styles.basketItem}>
+            <div className={styles.imgContainer}>
+              <img
+                className={styles.img}
+                src={product.img}
+                alt="Картинка товара"
+              ></img>
             </div>
+            <div className={styles.descriptionContainer}>
+              <p className={styles.title}>{product.name}</p>
+              <div className={styles.buttonsContainer}>
+                <button className={styles.button} type="button" data-product-id={product.id} onClick={minus}>
+                  <img
+                    className={styles.iconPlus}
+                    src="images/minus.jpg"
+                    alt="Добавить товар"
+                  ></img>
+                </button>
+                <span>{product.quantity}</span>
+                <button className={styles.button} type="button" data-product-id={product.id} onClick={plus}>
+                  <img
+                    className={styles.iconMinus}
+                    src="images/plus.jpg"
+                    alt="Удалить товар"
+                  ></img>
+                </button>
+                <span className={styles.price}>$ {product.price}</span>
+              </div>
+                <button className={`${styles.button} ${styles.deleteButton}`}><img src="icons/delete-icon.svg" alt="Удалить товар" /></button>
+            </div>
+          </div>
         ))
-        }
-        </>
-    )
-}
+      )}
+    </>
+  );
+};
 export default Forbasked;

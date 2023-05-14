@@ -32,6 +32,18 @@ export const PRODUCTS = [
   },
   {
     id: 4,
+    name: "New Balance 574 Vintage Brights",
+    img: "images/0.jpg",
+    price: "$ 1200",
+  },
+  {
+    id: 5,
+    name: "New Balance Made in UK 920 Chinese New Year",
+    img: "images/8.jpg",
+    price: "$ 1400",
+  },
+  {
+    id: 6,
     name: "New Balance 373 Modern Classics",
     img: "images/2.jpg",
     price: "$ 1500",

@@ -1,21 +1,46 @@
-.under {
+.basketItem {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgContainer .img {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 90px;
+  background-size: cover;
+}
+
+.buttonsContainer {
     display: flex;
-    gap: 40px;
-    justify-content: center;
+    align-items: center; 
 }
-.img{
-    margin-left: 40px;
-    margin-bottom: 40px;
-    width: 90px;
-    background-size: cover;
+
+.title {
+  font-weight: normal;
 }
-.name{
-    font-weight: bold;
+
+.iconPlus, .iconMinus {
+  width: 19.98px;
 }
-.buttons{
-    width:19.98px;
-}
-.button{
+
+.button {
   border: none;
-    background-color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 10px;
+    top: 3px;
 }
