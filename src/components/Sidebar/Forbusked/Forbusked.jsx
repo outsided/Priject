@@ -13,6 +13,7 @@ const Forbasked = () => {
             if(product.id === id) {
                 return {
                     ...product,
+                    price: product.price + product.nominal,
                     quantity: product.quantity + 1
                 }
             }
@@ -20,9 +21,33 @@ const Forbasked = () => {
         })
      })
   }
-
   function minus(e) {
-    
+    const id = Number(e.currentTarget.dataset.productId);
+    setProducts(prev => {
+       return prev.map(product => {
+           if(product.id === id) {
+            if(product.quantity === 0){
+              return {
+                ...product
+              }
+            }
+               return {
+                   ...product,
+                   price: product.price - product.nominal,
+                   quantity: product.quantity - 1
+               }
+           }
+           return product
+       })
+    })
+  }
+  
+  function deliteButton(e){
+    console.log(e)
+    setProducts(prev => {
+        return prev.slice(0,1)
+    }
+    )
   }
 
   return (
@@ -59,7 +84,9 @@ const Forbasked = () => {
                 </button>
                 <span className={styles.price}>$ {product.price}</span>
               </div>
-                <button className={`${styles.button} ${styles.deleteButton}`}><img src="icons/delete-icon.svg" alt="Удалить товар" /></button>
+                <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={deliteButton}>
+                  <img src="icons/delete-icon.svg" alt="Удалить товар" />
+                  </button>
             </div>
           </div>
         ))
