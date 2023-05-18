@@ -43,9 +43,15 @@ const Forbasked = () => {
   }
   
   function deliteButton(e){
-    console.log(e)
+    const id = Number(e.currentTarget.dataset.productId);
+    console.log(id)
     setProducts(prev => {
-        return prev.slice(0,1)
+      if(prev[0].id === id){
+        return prev.splice(1,1)
+        
+      }else if(prev[1].id === id){
+        return prev.splice(0,1)
+      }
     }
     )
   }
