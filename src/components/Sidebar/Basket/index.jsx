@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 
-const Forbasked = (props) => {
+const Basket = (props) => {
+  
   return (
     <>
       {props.products.length === 0 ? (
@@ -33,7 +34,7 @@ const Forbasked = (props) => {
                     alt="Удалить товар"
                   ></img> 
                 </button>
-                <span className={styles.price}>$ {product.price}</span>
+                <span className={styles.price}>$ {product.price * product.quantity}</span>
               </div>
                 <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={props.deleteButton}>
                   <img src="icons/delete-icon.svg" alt="Удалить товар" />
@@ -45,4 +46,4 @@ const Forbasked = (props) => {
     </>
   );
 };
-export default Forbasked;
+export default Basket;

@@ -1,0 +1,19 @@
+.app {
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "c s";
+  grid-template-columns: 3fr 1fr;
+}
+.header {
+  border-bottom: 1px solid #e7e7e7;
+  grid-area: h;
+}
+.sidebar {
+  border-left: 1px solid #e7e7e7;
+
+  grid-area: s;
+}
+.content {
+  grid-area: c;
+}
