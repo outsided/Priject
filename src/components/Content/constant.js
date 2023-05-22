@@ -12,6 +12,7 @@ export const PRODUCTS = [
     img: "images/6.jpg",
     price: 800,
     nominal: 800,
+    quantity: 1,
   },
   {
     id: 1,
@@ -19,6 +20,7 @@ export const PRODUCTS = [
     img: "images/11.jpg",
     price: 1000,
     nominal: 1000,
+    quantity: 1,
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ export const PRODUCTS = [
     img: "images/0.jpg",
     nominal: 1200,
     price: 1200,
+    quantity: 1,
   },
   {
     id: 5,
@@ -45,6 +48,7 @@ export const PRODUCTS = [
     img: "images/8.jpg",
     nominal: 1400,
     price: 1400,
+    quantity: 1,
   },
   {
     id: 6,
@@ -52,6 +56,7 @@ export const PRODUCTS = [
     img: "images/2.jpg",
     price: 1500,
     nominal: 1500,
+    quantity: 1,
   },
 ];
 export const PRODUCTSBASKET = [
