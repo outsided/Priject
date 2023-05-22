@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 
 const Basket = (props) => {
-  
   return (
     <>
       {props.products.length === 0 ? (
@@ -19,7 +18,12 @@ const Basket = (props) => {
             <div className={styles.descriptionContainer}>
               <p className={styles.title}>{product.name}</p>
               <div className={styles.buttonsContainer}>
-                <button className={styles.button} type="button" data-product-id={product.id} onClick={props.minus}>
+                <button
+                  className={styles.button}
+                  type="button"
+                  data-product-id={product.id}
+                  onClick={props.minus}
+                >
                   <img
                     className={styles.iconPlus}
                     src="images/minus.jpg"
@@ -27,18 +31,29 @@ const Basket = (props) => {
                   ></img>
                 </button>
                 <span>{product.quantity}</span>
-                <button className={styles.button} type="button" data-product-id={product.id} onClick={props.plus}>
+                <button
+                  className={styles.button}
+                  type="button"
+                  data-product-id={product.id}
+                  onClick={props.plus}
+                >
                   <img
                     className={styles.iconMinus}
                     src="images/plus.jpg"
                     alt="Удалить товар"
-                  ></img> 
+                  ></img>
                 </button>
-                <span className={styles.price}>$ {product.price * product.quantity}</span>
+                <span className={styles.price}>
+                  $ {product.price * product.quantity}
+                </span>
               </div>
-                <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={props.deleteButton}>
-                  <img src="icons/delete-icon.svg" alt="Удалить товар" />
-                  </button>
+              <button
+                className={`${styles.button} ${styles.deleteButton}`}
+                data-product-id={product.id}
+                onClick={props.deleteButton}
+              >
+                <img src="icons/delete-icon.svg" alt="Удалить товар" />
+              </button>
             </div>
           </div>
         ))
