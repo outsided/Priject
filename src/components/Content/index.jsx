@@ -1,5 +1,5 @@
 import { PRODUCTS }  from './constant';
-import Button from '../../UI/Button/Button'
+import Button from '../../UI/Button'
 import styles from './styles.module.css';
 
 const Content = () => {
@@ -23,4 +23,4 @@ const Content = () => {
     )
 }
 export default Content;
-//{new Intl.NumberFormat('ru-RU',{style: 'currency',currency:'USD'}).format(100)}
+
