@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 
 const Forbasked = (props) => {
-  console.log(props)
   return (
     <>
       {props.products.length === 0 ? (

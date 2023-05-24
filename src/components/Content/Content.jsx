@@ -13,7 +13,7 @@ const Content = () => {
                     <div className={styles.name}>{product.name}</div>
                     <div className={styles.price}>
                     <Button styles={styles.price} icon='icons/basket-icon.svg'/>
-                    <span>{product.price}</span>
+                    <span className={styles.price}>{product.price}</span>
                     </div>
                 </div>
             ))

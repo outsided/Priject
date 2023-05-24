@@ -46,7 +46,7 @@ const Sidebar = (props) => {
    
    function deleteButton(e){
      const id = Number(e.currentTarget.dataset.productId);
-     setProducts(products.filter((a) => a.id !== id))
+     setProducts(products.filter(a => a.id !== id))
    } 
 
    function sum() {
