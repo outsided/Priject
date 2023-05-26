@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 const Basket = (props) => {
-  
+
   return (
     <>
       {props.products.length === 0 ? (
@@ -19,7 +19,7 @@ const Basket = (props) => {
             <div className={styles.descriptionContainer}>
               <p className={styles.title}>{product.name}</p>
               <div className={styles.buttonsContainer}>
-                <button className={styles.button} type="button" data-product-id={product.id} onClick={props.minus}>
+                <button className={styles.button} type="button" data-product-id={product.id} data-action='minus' onClick={(event) => props.productCounterHandler(event,'minus')}>
                   <img
                     className={styles.iconPlus}
                     src="images/minus.jpg"
@@ -27,7 +27,7 @@ const Basket = (props) => {
                   ></img>
                 </button>
                 <span>{product.quantity}</span>
-                <button className={styles.button} type="button" data-product-id={product.id} onClick={props.plus}>
+                <button className={styles.button} type="button" data-product-id={product.id} data-action='plus' onClick={(event) => props.productCounterHandler(event,'plus')}>
                   <img
                     className={styles.iconMinus}
                     src="images/plus.jpg"
@@ -38,6 +38,7 @@ const Basket = (props) => {
               </div>
                 <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={props.deleteButton}>
                   <img src="icons/delete-icon.svg" alt="Удалить товар" />
+
                   </button>
             </div>
           </div>
