@@ -7,7 +7,7 @@ import Sum from './Sum/Sum'
 const shiping = 50;
 
 const Sidebar = () => {
-   const [products, setProducts] = useState(PRODUCTSBASKET);
+  const [products, setProducts] = useState(PRODUCTSBASKET);
 
    function productCounterHandler(e,action)  {
 
@@ -32,7 +32,10 @@ const Sidebar = () => {
      setProducts(products.filter(a => a.id !== id))
    } 
 
-    const sum = products.reduce((acc, item ) => acc+=item.price*item.quantity, 0)
+  const sum = products.reduce(
+    (acc, item) => (acc += item.price * item.quantity),
+    0
+  );
 
   
 return (

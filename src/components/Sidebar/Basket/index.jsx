@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 
 const Basket = (props) => {
-
   return (
     <>
       {props.products.length === 0 ? (
@@ -32,9 +31,11 @@ const Basket = (props) => {
                     className={styles.iconMinus}
                     src="images/plus.jpg"
                     alt="Удалить товар"
-                  ></img> 
+                  ></img>
                 </button>
-                <span className={styles.price}>$ {product.price * product.quantity}</span>
+                <span className={styles.price}>
+                  $ {product.price * product.quantity}
+                </span>
               </div>
                 <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={props.deleteButton}>
                   <img src="icons/delete-icon.svg" alt="Удалить товар" />

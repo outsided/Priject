@@ -18,15 +18,16 @@
 }
 
 .buttonsContainer {
-    display: flex;
-    align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .title {
   font-weight: normal;
 }
 
-.iconPlus, .iconMinus {
+.iconPlus,
+.iconMinus {
   width: 19.98px;
 }
 
@@ -38,9 +39,9 @@
 }
 
 .deleteButton {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    right: 10px;
-    top: 3px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 10px;
+  top: 3px;
 }
