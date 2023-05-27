@@ -22,7 +22,7 @@ const Content = () => {
             <div className={styles.name}><b>{product.name}</b></div>
             {/*  3 раза подряд styles.price */}
             <div className={styles.price}>
-              <Button styles={styles.price} icon="icons/basket-icon.svg" onClick={() => addToBasketHandler(product)} />
+              <Button icon="icons/basket-icon.svg" onClick={() => addToBasketHandler(product)} />
               <span className={styles.price}>{product.price}</span>
             </div>
           </div>
