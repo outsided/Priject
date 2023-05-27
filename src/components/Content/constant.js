@@ -2,14 +2,6 @@ export const PRODUCTS = [
   {
     id: 1,
     name: "New Balance 564 Vintage Brights",
-    img: "images/5.jpg",
-    quantity: 1,
-    nominal: 650,
-    price: 650,
-  },
-  {
-    id: 2,
-    name: "New Balance 564 Vintage Brights",
     img: "images/6.jpg",
     price: 800,
     // Что за nominal ?
@@ -17,7 +9,7 @@ export const PRODUCTS = [
     quantity: 1,
   },
   {
-    id: 3,
+    id: 2,
     name: "New Balance 564 Vintage Brights",
     img: "images/11.jpg",
     price: 1000,
@@ -25,15 +17,7 @@ export const PRODUCTS = [
     quantity: 1,
   },
   {
-    id: 4,
-    name: "New Balance 574 Vintage Brights",
-    img: "images/0.jpg",
-    price: 1200,
-    nominal: 1200,
-    quantity: 1,
-  },
-  {
-    id: 5,
+    id: 3,
     name: "New Balance Made in UK 920 Chinese New Year",
     img: "images/13.jpg",
     price: 1400,
@@ -41,7 +25,7 @@ export const PRODUCTS = [
     quantity: 1,
   },
   {
-    id: 6,
+    id: 4,
     name: "New Balance 574 Vintage Brights",
     img: "images/10.jpg",
     nominal: 1200,
@@ -49,7 +33,7 @@ export const PRODUCTS = [
     quantity: 1,
   },
   {
-    id: 7,
+    id: 5,
     name: "New Balance Made in UK 920 Chinese New Year",
     img: "images/8.jpg",
     nominal: 1400,
@@ -57,7 +41,7 @@ export const PRODUCTS = [
     quantity: 1,
   },
   {
-    id: 8,
+    id: 6,
     name: "New Balance 373 Modern Classics",
     img: "images/2.jpg",
     price: 1500,
