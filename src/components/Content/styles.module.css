@@ -18,6 +18,9 @@
   border-radius: 10px;
   background-size: cover;
   max-width: 200px;
+  width: 200px;
+  height: 139px;
+  object-fit: contain;
 
 }
 .name{
