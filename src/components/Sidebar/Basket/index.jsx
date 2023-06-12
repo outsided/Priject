@@ -1,12 +1,19 @@
 import styles from "./styles.module.css";
+import {useSelector} from 'react-redux';
+
 
 const Basket = (props) => {
+  const { products } = useSelector((state) => state.basket);
+
+
+
+  
   return (
     <>
-      {props.products.length === 0 ? (
+      {products.length === 0 ? (
         <div>Basket is empty</div>
       ) : (
-        props.products.map((product) => (
+      products.map((product) => (
           <div key={`product-id-${product.id}`} className={styles.basketItem}>
             <div className={styles.imgContainer}>
               <img

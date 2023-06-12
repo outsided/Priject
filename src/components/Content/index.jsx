@@ -10,8 +10,10 @@ const Content = () => {
   // 1 вариант - Если товар уже добавлен то дизейблить кнопку / т.е нельзя добавлять один товар много раз, надо сделать проверку.
   //  2 вариант - Если товар уже есть в корзине, то увеличивать его количество (quantity)
   const addToBasketHandler = (product) => {
+    console.log('product', product)
     dispatch(addToBasket(product))
   }
+  
   return (
     <>
       <div className={styles.cardList}>
