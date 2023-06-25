@@ -1,19 +1,19 @@
 import styles from "./styles.module.css";
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {removeFromBasket,changeQuantity} from '../../../store/reducers/basketSlice'
 
 
 const Basket = (props) => {
   const { products } = useSelector((state) => state.basket);
 
+  const dispatch = useDispatch()
 
-
-  
   return (
     <>
       {products.length === 0 ? (
         <div>Basket is empty</div>
       ) : (
-      products.map((product) => (
+      products.map((product,index) => (
           <div key={`product-id-${product.id}`} className={styles.basketItem}>
             <div className={styles.imgContainer}>
               <img
@@ -25,7 +25,7 @@ const Basket = (props) => {
             <div className={styles.descriptionContainer}>
               <p className={styles.title}>{product.name}</p>
               <div className={styles.buttonsContainer}>
-                <button className={styles.button} type="button" data-product-id={product.id} data-action='minus' onClick={(event) => props.productCounterHandler(event,'minus')}>
+                <button className={styles.button} type="button" data-product-id={product.id} data-action='minus' onClick={() => dispatch(changeQuantity({...product,quantity:product.quantity -1}))}>
                   <img
                     className={styles.iconPlus}
                     src="images/minus.jpg"
@@ -33,7 +33,7 @@ const Basket = (props) => {
                   ></img>
                 </button>
                 <span>{product.quantity}</span>
-                <button className={styles.button} type="button" data-product-id={product.id} data-action='plus' onClick={(event) => props.productCounterHandler(event,'plus')}>
+                <button className={styles.button} type="button" data-product-id={product.id} data-action='plus' onClick={() => dispatch(changeQuantity({...product,quantity:product.quantity +1}))}>
                   <img
                     className={styles.iconMinus}
                     src="images/plus.jpg"
@@ -44,9 +44,8 @@ const Basket = (props) => {
                   $ {product.price * product.quantity}
                 </span>
               </div>
-                <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={props.deleteButton}>
+                <button className={`${styles.button} ${styles.deleteButton}`} data-product-id={product.id} onClick={() => dispatch(removeFromBasket(product.id))}>
                   <img src="icons/delete-icon.svg" alt="Удалить товар" />
-
                   </button>
             </div>
           </div>

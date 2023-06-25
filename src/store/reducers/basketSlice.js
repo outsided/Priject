@@ -11,15 +11,25 @@ export const basketSlice = createSlice({
     addToBasket: (state, action) => {
       state.products.push(action.payload);
     },
-    removeFromBasket: (state) => {
-      // TODO
-      // state.filter
+    removeFromBasket: (state,action) => {
+      
+        const daleteProduct = state.products.filter((product ) => product.id !== action.payload )
+        state.products = daleteProduct
     },
-    changeQuantity: (state) => {
-      // TODO
-      console.log("changeQuantity state", state);
-    },
+    changeQuantity: (state,action) => {
+      
+      state.products = state.products.map(item => {
+        if(item.id === action.payload.id) {
+        return{
+        ...item,
+         quantity: action.payload.quantity
+          }
+        }
+        return item
+      })
   },
+  
+}
 });
 
 export const { addToBasket, removeFromBasket, changeQuantity } =
