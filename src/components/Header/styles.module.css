@@ -2,3 +2,19 @@
   height: 100px;
   width: 300px;
 }
+.header{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.buttonbasket{
+  border:none;
+  background-color: white;
+  cursor: pointer;
+}
+.busket{
+  margin: 20px;
+  justify-content: flex-end;
+  background: none;
+  max-width: 35px;
+}

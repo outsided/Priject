@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PRODUCTSBASKET } from "../Content/constant";
 import Basket from "./Basket";
-// import { useSelector } from 'react-redux'
+
 import styles from "./styles.module.css";
 import Total from "./Total";
 
@@ -9,9 +9,6 @@ const shiping = 50;
 
 const Sidebar = () => {
   const [products, setProducts] = useState(PRODUCTSBASKET);
-  //  Забираешь из стора продуктсы и выводишь
- // const { products } = useSelector(state => state.basket)
-
 
   function productCounterHandler(e, action) {
     let id = Number(e.currentTarget.dataset.productId);

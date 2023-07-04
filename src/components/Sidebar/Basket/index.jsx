@@ -13,8 +13,8 @@ const Basket = (props) => {
       {products.length === 0 ? (
         <div>Basket is empty</div>
       ) : (
-      products.map((product,index) => (
-          <div key={`product-id-${product.id}`} className={styles.basketItem}>
+      products.map((product) => (
+         <div key={`product-id-${product.id}`} className={styles.basketItem}>
             <div className={styles.imgContainer}>
               <img
                 className={styles.img}
@@ -51,6 +51,7 @@ const Basket = (props) => {
           </div>
         ))
       )}
+ 
     </>
   );
 };

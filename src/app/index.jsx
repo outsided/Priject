@@ -1,8 +1,9 @@
 import Header from "../components/Header";
 import Content from "../components/Content";
 import Sidebar from "../components/Sidebar";
-
+import {Routes,Route} from "react-router-dom";
 import styles from './styles.module.css';
+import Basket from '../components/Sidebar/Basket';
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
         <Sidebar />
       </div>
       <div className={styles.content}>
-        <Content />
+       <Routes>
+          <Route path='/' element={<Content/>}/>
+          <Route path='/Basket' element={<Basket/>}/>
+       </Routes>
       </div>
     </div>
   );

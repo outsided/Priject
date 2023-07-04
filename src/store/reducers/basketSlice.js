@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
@@ -9,7 +9,21 @@ export const basketSlice = createSlice({
   initialState,
   reducers: {
     addToBasket: (state, action) => {
-      state.products.push(action.payload);
+      const isHasProduct = state.products.some(item => item.id === action.payload.id);
+      if(isHasProduct) {
+        state.products = state.products.map(product => {
+          if(product.id === action.payload.id) {
+            return {
+              ...product,
+              quantity: product.quantity + 1,
+            }
+          }
+          return product;
+        })
+      } else {
+        state.products.push(action.payload);
+      }
+    
     },
     removeFromBasket: (state,action) => {
       
@@ -17,16 +31,16 @@ export const basketSlice = createSlice({
         state.products = daleteProduct
     },
     changeQuantity: (state,action) => {
-      
       state.products = state.products.map(item => {
-        if(item.id === action.payload.id) {
-        return{
-        ...item,
-         quantity: action.payload.quantity
+        if( item.id === action.payload.id){
+          return{
+            ...item,
+           quantity: action.payload.quantity === 0? action.payload.quantity = 1: action.payload.quantity
+           }
           }
-        }
         return item
-      })
+      
+    })
   },
   
 }

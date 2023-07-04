@@ -50,20 +50,5 @@ export const PRODUCTS = [
   },
 ];
 export const PRODUCTSBASKET = [
-  {
-    id: 1,
-    name: "New Balance 373 Modern Classics",
-    img: "images/11.jpg",
-    price: 1500,
-    quantity: 1,
-    nominal: 1500,
-  },
-  {
-    id: 2,
-    name: "New Balance 373 Modern Classics",
-    img: "images/12.jpg",
-    price: 1500,
-    quantity: 1,
-    nominal: 1500,
-  },
+ 
 ];

@@ -19,8 +19,7 @@ const Content = () => {
         {PRODUCTS.map((product) => (
           <div className={styles.card} key={product.id}>
             <img className={styles.img} src={product.img} alt={product.img} />
-            {/* Вместо тэга b используй strong */}
-            <div className={styles.name}><b>{product.name}</b></div>
+            <div className={styles.name}><strong>{product.name}</strong></div>
             {/*  3 раза подряд styles.price */}
             <div className={styles.price}>
               <Button icon="icons/basket-icon.svg" onClick={() => addToBasketHandler(product)} />
