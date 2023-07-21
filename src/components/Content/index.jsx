@@ -7,8 +7,6 @@ import styles from "./styles.module.css";
 const Content = () => {
   const dispatch = useDispatch();
 
-  // 1 вариант - Если товар уже добавлен то дизейблить кнопку / т.е нельзя добавлять один товар много раз, надо сделать проверку.
-  //  2 вариант - Если товар уже есть в корзине, то увеличивать его количество (quantity)
   const addToBasketHandler = (product) => {
     dispatch(addToBasket(product))
   }
@@ -20,7 +18,6 @@ const Content = () => {
           <div className={styles.card} key={product.id}>
             <img className={styles.img} src={product.img} alt={product.img} />
             <div className={styles.name}><strong>{product.name}</strong></div>
-            {/*  3 раза подряд styles.price */}
             <div className={styles.price}>
               <Button icon="icons/basket-icon.svg" onClick={() => addToBasketHandler(product)} />
               <span className={styles.price}>{product.price}</span>

@@ -4,7 +4,6 @@ export const PRODUCTS = [
     name: "New Balance 564 Vintage Brights",
     img: "images/6.jpg",
     price: 800,
-    // Что за nominal ?
     nominal: 800,
     quantity: 1,
   },
@@ -48,7 +47,4 @@ export const PRODUCTS = [
     nominal: 1500,
     quantity: 1,
   },
-];
-export const PRODUCTSBASKET = [
- 
-];
+]

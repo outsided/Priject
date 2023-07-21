@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
@@ -26,7 +26,6 @@ export const basketSlice = createSlice({
     
     },
     removeFromBasket: (state,action) => {
-      
         const daleteProduct = state.products.filter((product ) => product.id !== action.payload )
         state.products = daleteProduct
     },
@@ -35,14 +34,13 @@ export const basketSlice = createSlice({
         if( item.id === action.payload.id){
           return{
             ...item,
-           quantity: action.payload.quantity === 0? action.payload.quantity = 1: action.payload.quantity
+            quantity: action.payload.quantity === 0? action.payload.quantity = 1: action.payload.quantity
            }
           }
         return item
       
     })
   },
-  
 }
 });
 

@@ -1,19 +1,17 @@
 import styles from "./styles.module.css";
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {removeFromBasket,changeQuantity} from '../../../store/reducers/basketSlice'
 
 
 const Basket = (props) => {
-  const { products } = useSelector((state) => state.basket);
-
   const dispatch = useDispatch()
 
   return (
     <>
-      {products.length === 0 ? (
+      {props.products.length === 0 ? (
         <div>Basket is empty</div>
       ) : (
-      products.map((product) => (
+      props.products.map((product) => (
          <div key={`product-id-${product.id}`} className={styles.basketItem}>
             <div className={styles.imgContainer}>
               <img
