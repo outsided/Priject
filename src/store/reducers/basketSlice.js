@@ -30,6 +30,7 @@ export const basketSlice = createSlice({
         state.products = daleteProduct
     },
     changeQuantity: (state,action) => {
+     
       state.products = state.products.map(item => {
         if( item.id === action.payload.id){
           return{
@@ -40,11 +41,14 @@ export const basketSlice = createSlice({
         return item
       
     })
-  },
+   },
+   countBasked: () => {
+    return 4
+   },
 }
 });
 
-export const { addToBasket, removeFromBasket, changeQuantity } =
+export const { addToBasket, removeFromBasket, changeQuantity, countBasked } =
   basketSlice.actions;
 
 export default basketSlice;

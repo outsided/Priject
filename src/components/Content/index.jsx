@@ -10,7 +10,6 @@ const Content = () => {
   const addToBasketHandler = (product) => {
     dispatch(addToBasket(product))
   }
-  
   return (
     <>
       <div className={styles.cardList}>
