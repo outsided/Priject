@@ -2,11 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-basis: 50%;
-  
+  max-width: 890px;
+  max-height: 650px;
+  margin-left: 300px;
 }
 .card {
-  margin: 60px;
+  margin: 20px;
   border: 1px solid rgb(208, 201, 201);
   max-height: 300px;
   max-width: 250px;
