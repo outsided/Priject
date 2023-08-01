@@ -1,8 +1,8 @@
 .basketItem {
   position: relative;
   display: flex;
-  gap: 40px;
-  justify-content: center;
+  width: 530px;
+  margin-left: 10px;
 }
 
 .descriptionContainer {
